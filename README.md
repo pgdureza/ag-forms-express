@@ -1,0 +1,19 @@
+### The Project
+This project is the REST API for https://github.com/pgdureza/ag-forms-shopify-app.
+
+App is currently deployed ot heroku in
+http://ag-forms-express.herokuapp.com/
+
+The project was built using Postgresql for the database and heroku as the host.
+
+### API 
+* GET /forms/html/{shopify_store_doman}/{form_id} - returns HTML content of form ready for ajax injection to dom
+* GET /forms/{shopify_store_doman}/{form_id} - returns JSON content of form ready for parsing
+* PUT /forms/{shopify_store_doman}/{form_id} - requires the following parameters to update a form
+  * title (string)
+  * content (html)
+* POST /forms/ - creates new data which requires the following parameters 
+  * store (string)
+  * title (string)
+  * content (html)
+* DELETE /forms/{shopify_store_doman}/{} - deletes form data 
