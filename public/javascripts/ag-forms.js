@@ -1,13 +1,11 @@
 (function(config) {
-  var source = config.source;
-  var id = config.id;
-  var container = config.container;
-  if (source && id && container) {
+  var host = (Shopify && Shopify.shop) || window.location.host;
+  $("[data-agform]").each(function(){
+    $el = $(this);
+    var id = $el.data('agform');
     var src = 'https://ag-forms-express.herokuapp.com/forms/html/';
-    $.get(src + source + '/' + id, function(html){
-      $(container).html(html);
+    $.get(src + host + '/' + id, function(html){
+      $el.html(html);
     })
-  } else {
-    console.warn('AG forms initialized but missing params passed')
-  }
+  })
 }())
