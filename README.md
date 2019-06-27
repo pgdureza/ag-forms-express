@@ -1,8 +1,4 @@
 ### The Project
-This project is the REST API for https://github.com/pgdureza/ag-forms-shopify-app.
-
-App is currently deployed ot heroku in
-http://ag-forms-express.herokuapp.com/
 
 The project was built using Postgresql for the database and heroku as the host.
 
